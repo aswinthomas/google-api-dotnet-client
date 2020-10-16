@@ -17,7 +17,7 @@ install:
   # add dotnet to PATH
   - ps: $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"
   - "%PYTHON%\\python.exe -m pip install wheel"
-  - "%PYTHON%\\python.exe -m pip install --index-url https://test.pypi.org/simple/ 'httplib2==0.17.5'"
+  - "%PYTHON%\\python.exe -m pip install --index-url https://test.pypi.org/simple/ httplib2==0.17.5"
   - "%PYTHON%\\python.exe -m pip install Django==1.8.1 google-api-python-client google-apputils python-gflags"
 
 # Perform the build.
