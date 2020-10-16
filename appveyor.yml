@@ -7,7 +7,8 @@ version: 1.0.{build}-{branch}
 image: Visual Studio 2019
 
 environment:
-  - PYTHON: "C:\\Python27"
+  matrix:
+    - PYTHON: "C:\\Python27"
   
 # Install the pre-requisites for the build.
 install:
