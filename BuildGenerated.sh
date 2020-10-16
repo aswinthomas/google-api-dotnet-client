@@ -113,6 +113,7 @@ if [ -z ${SKIPGENERATE+x} ]; then
 fi
 
 if [ -z ${SKIPBUILD+x} ]; then
+  echo Deleting existing Generated.sln
   rm -f Generated.sln
   dotnet new sln --name Generated
   echo $CODE_GENERATION_DIR/*/*.csproj | xargs dotnet sln Generated.sln add
